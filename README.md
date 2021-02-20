@@ -14,7 +14,7 @@ We present a tremendous dataset generally for fall revelation, specifically UP-F
 
 ## Labels in the Dataset
 
-![alt text](/images/1.png?raw=true)
+![alt text](/images/1.png)
 
 ## Dataset(csv)
 ![alt text](/images/6.png)
@@ -36,7 +36,7 @@ def rearrange_dataframe(df):
   df["id"]=df.apply(lambda x:map_image__csv(x['TimeStamps'], x['Activity']),axis=1)
   return df
   
-###Dataset with image path
+### Dataset with image path
   ![alt text](/images/7.png)
   
 ## Model
@@ -44,29 +44,6 @@ def rearrange_dataframe(df):
   restnet=models.resnet34(pretrained=True, progress=True)
   restnet_updated = nn.Sequential(*list(restnet.children())[:-1])-this sequential layer is used because of timesires data
   
-  Bringing to low level features from High level
-  
-  class LsfmNet(nn.Module):
-    def __init__(self,init_net,no_sensor_features,classes):
-        super(LsfmNet, self).__init__()
-        self.restnet = init_net
-        self.fc1 = nn.Linear(512, 120)
-        self.fc2 = nn.Linear(120+no_sensor_features, 60)
-        self.fc3 = nn.Linear(60, classes)
-
-   def forward(self, image,data):
-        image=image.type(torch.float32)
-        rest_out = self.restnet(image)
-        x1=self.fc1(rest_out.squeeze())
-        if len(x1.size())==1:x1=torch.unsqueeze(x1, dim=0)
-        x = torch.cat((x1, data), dim=1)
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return F.softmax(x)
-
-
-lsfmnet = LsfmNet(restnet_updated,30,11)
-
 ## Confusion Matrix
 ![alt text](/images/8.png)
 
