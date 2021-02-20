@@ -2,9 +2,10 @@
 This region shows the UP-Fall Detection dataset and depicts the technique of its acquiring, pre-dealing with, joining and storaging. Besides, one potential part extraction process is moreover point by point. 
 
 ## Data extraction
+As setting careful sensors, we presented six infrared sensors as a system 0.40 m over the floor of the room, to check the alterations in impedance of the optical devices, where 0 infers obstruction and 1 no impedance. At last, two Microsoft LifeCam Cinema cameras were arranged at 1.82 m over the floor
 ![alt text](/images/3.png?raw=true)
 
-![alt text](/images/4.png?raw=true)
+![alt text](/images/4.png)
 
 ## Description of the Dataset:
 
