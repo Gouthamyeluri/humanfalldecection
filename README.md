@@ -16,18 +16,18 @@ We present a tremendous dataset generally for fall revelation, specifically UP-F
 
 ![alt text](/1.png?raw=true)
 
-###Dataset(csv)
+## Dataset(csv)
 ![alt text](/images/6.png)
 
-###Dataset(image)
+## Dataset(image)
 ![alt text](/images/2.png)
 
-##Mapping the datasets
+## Mapping the datasets
 Here we are mapping the CSV and IMAGE datasets by using a timestamp, the reason why we are using timestamp is image are stored in folders with names like -timestamp.png
 image Folder structure
 ![alt text](/images/5.png)
 
-###code
+## code
 def map_image__csv(ts,activity):
   ts=ts.replace(':','_')
   image_path=f"Activity{activity}/{ts}.png"
@@ -39,7 +39,7 @@ def rearrange_dataframe(df):
   Dataset with image path
   ![alt text](/images/7.png)
   
-  ##Model
+## Model
   RESnet
   restnet=models.resnet34(pretrained=True, progress=True)
   restnet_updated = nn.Sequential(*list(restnet.children())[:-1])-this sequential layer is used because of timesires data
@@ -67,10 +67,10 @@ def rearrange_dataframe(df):
 
 lsfmnet = LsfmNet(restnet_updated,30,11)
 
-##Confusion Matrix
+## Confusion Matrix
 ![alt text](/images/8.png)
 
-###Model accrucury is 89%
+### Model accrucury is 89%
   
 
 
