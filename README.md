@@ -27,7 +27,7 @@ Here we are mapping the CSV and IMAGE datasets by using a timestamp, the reason 
 image Folder structure
 ![alt text](/images/5.png)
 
-## code
+### code
 def map_image__csv(ts,activity):
   ts=ts.replace(':','_')
   image_path=f"Activity{activity}/{ts}.png"
@@ -36,7 +36,7 @@ def rearrange_dataframe(df):
   df["id"]=df.apply(lambda x:map_image__csv(x['TimeStamps'], x['Activity']),axis=1)
   return df
   
-  Dataset with image path
+###Dataset with image path
   ![alt text](/images/7.png)
   
 ## Model
