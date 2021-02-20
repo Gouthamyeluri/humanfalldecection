@@ -14,7 +14,7 @@ We present a tremendous dataset generally for fall revelation, specifically UP-F
 
 ## Labels in the Dataset
 
-![alt text](/1.png?raw=true)
+![alt text](/images/1.png?raw=true)
 
 ## Dataset(csv)
 ![alt text](/images/6.png)
