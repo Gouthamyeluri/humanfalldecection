@@ -42,12 +42,13 @@ def rearrange_dataframe(df):
 ## Model
   RESnet
   restnet=models.resnet34(pretrained=True, progress=True)
+  
   restnet_updated = nn.Sequential(*list(restnet.children())[:-1])-this sequential layer is used because of timesires data
   
 ## Confusion Matrix
 ![alt text](/images/8.png)
 
-### Model accrucury is 89%
+#### Model accrucury is 89%
   
 
 
