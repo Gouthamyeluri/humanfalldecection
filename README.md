@@ -20,4 +20,4 @@ We present a tremendous dataset generally for fall revelation, specifically UP-F
  - 10            jumping 
  - 11            laying
 
-![alt text](humanfalldecection/1.png?raw=true)
+![alt text](/humanfalldecection/1.png?raw=true)
